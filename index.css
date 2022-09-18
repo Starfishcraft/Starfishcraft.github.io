@@ -4,13 +4,16 @@ body {
     padding: 0;
     margin: 0;
     font-family: 'Roboto', sans-serif;
+    overflow-x: hidden;
 }
 
 section {
+    position: relative;
     display: grid;
     place-items: center;
     align-content: center;
-    min-height: 100vh;
+    min-height: 50vh;
+    padding: 200px;
 }
 
 .dark {
@@ -29,4 +32,104 @@ section {
 
 .show {
     opacity: 1;
+}
+.blue {
+    background-color: blue;
+}
+.red {
+    background-color: red;
+}
+.yellow {
+    background-color: yellow;
+}
+.green {
+    background-color: green;
+}
+.curve {
+    position: absolute;
+    height: 225px;
+    width: 100%;
+    bottom: 0;
+}
+.curve::before {
+    content: "";
+    display: block;
+    position: absolute;
+    border-radius: 100% 50%;
+    width: 55%;
+    height: 100%;
+    background-color: #131316;
+    transform: translate(85%, 60%);
+}
+.curve::after {
+    content: "";
+    display: block;
+    position: absolute;
+    border-radius: 100% 50%;
+    width: 55%;
+    height: 100%;
+    background-color: blue;
+    transform: translate(-3%, 40%);
+    z-index: -1;
+}
+.curve2::after {
+    content: "";
+    border-radius: 100%;
+    position: absolute;
+    bottom: 0;
+    height: 70%;
+    width: 70%;
+    background-color: rgb(71, 66, 66);
+    z-index: -1;
+}
+.wave {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.wave svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 244px;
+}
+
+.wave .shape-fill {
+    fill: red;
+}
+.spacer {
+    aspect-ratio : 960/300;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.layer1 {
+    background-image: url("./wave1.svg");
+}
+
+.wave2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.wave2 svg {
+    position: relative;
+    display: block;
+    width: calc(133% + 1.3px);
+    height: 233px;
+}
+
+.custom-shape-divider-top-1663523411 .shape-fill {
+    fill: #000000;
 }
