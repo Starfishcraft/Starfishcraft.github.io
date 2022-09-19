@@ -1,0 +1,23 @@
+body {
+    margin: 100px
+}
+#button1 {
+    background-color: red;
+    width: 100px;
+    height: 100px;
+}
+#number {
+    height: 50px;
+    width: 50px;
+    background-color: blue;
+    margin-left: 250px;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 50px;
+    color: white;
+}
+
+#range2 {
+    height: 50px;
+    background-color: green;
+}
